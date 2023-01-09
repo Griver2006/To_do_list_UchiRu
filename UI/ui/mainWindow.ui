@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="list_tasks">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>551</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+  background-color: #212121;
+  border: 1px solid #5a6b91;
+  font-family: &quot;Arial&quot;, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+QListWidget::item {
+  background-color: #303030;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+QListWidget::item:selected {
+  background-color: #505050;
+  color: white;
+}
+
+QListWidget::item:hover {
+  background-color: #404040;
+  cursor: pointer;
+}
+
+QListWidget::item:disabled {
+  color: #707070;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_add_task">
+    <property name="geometry">
+     <rect>
+      <x>574</x>
+      <y>40</y>
+      <width>211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-radius: 10px;
+	background-color: #666;
+	color: white;
+	transition: transform 0.2s;
+}
+
+QPushButton:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+QPushButton:pressed {
+  transform: scale(0.5);
+  background-color: darkgray;
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить задачу</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_add_category">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>130</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-radius: 10px;
+	background-color: #666;
+	color: white;
+	transition: transform 0.2s;
+}
+
+QPushButton:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+QPushButton:pressed {
+  transform: scale(0.5);
+  background-color: darkgray;
+}</string>
+    </property>
+    <property name="text">
+     <string>Добавить категорию</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_categories">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #666;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Все задачи</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="btn_edit">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>1</y>
+      <width>30</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-radius: 5px;
+  	background-color: #666;
+   color: white;
+   transition: transform 0.2s;
+}
+
+QPushButton:hover {
+	cursor: pointer;
+	background-color: gray;
+}
+
+QPushButton:pressed {
+	transform: scale(0.5);
+	background-color: darkgray;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../icons/mainWindow/pencil.png</normaloff>../icons/mainWindow/pencil.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>-11</x>
+      <y>-11</y>
+      <width>821</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(33, 33, 33);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>520</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 10px;
+background-color: #333;
+color: white;
+transition: transform 0.2s;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QRadioButton" name="radBtn_not_finished">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Не завершённые</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+     <widget class="QRadioButton" name="radBtn_finished">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Завершённые</string>
+      </property>
+      <attribute name="buttonGroup">
+       <string notr="true">buttonGroup</string>
+      </attribute>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>frame</zorder>
+   <zorder>list_tasks</zorder>
+   <zorder>btn_add_task</zorder>
+   <zorder>btn_add_category</zorder>
+   <zorder>comboBox_categories</zorder>
+   <zorder>btn_edit</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
